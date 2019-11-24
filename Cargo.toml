@@ -4,7 +4,7 @@ version = "0.3.0"
 description = "Calculator library"
 authors = ["LAURENT Louis <louis_laurent@aol.fr>"]
 edition = "2018"
-licence = "MIT"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
