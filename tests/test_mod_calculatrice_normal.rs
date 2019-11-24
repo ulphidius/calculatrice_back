@@ -1,6 +1,6 @@
 extern crate calculatrice_back;
 
-use calculatrice_back::calculatrice_primordial_fonction as basic;
+use calculatrice_back::calculatrice_primordial_fonction::basics as basic;
 
 #[cfg(test)]
 mod test_mod_calculatrice_basic {
