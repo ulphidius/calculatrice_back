@@ -8,3 +8,10 @@ rust:
 matrix:
   allow_failures:
     - rust: nightly
+
+# deploy:
+#   provider: script
+#   script: scripts/master.sh
+#   on:
+#     tags: true
+#     branch: master
