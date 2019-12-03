@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --local user.name ${GIT_USERNAME}
+git config --local user.name ${GIT_USER}
 git config --local user.email ${GIT_EMAIL}
 
 git tag ${VERSION}

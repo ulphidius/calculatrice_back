@@ -4,6 +4,8 @@ env:
   global:
     - VERSION=0.4.1
     - CARGO_FILE="Cargo.toml"
+    - GIT_USER="Travis CI"
+    - GIT_EMAIL="JohnDoe@test.fr"
 
 before_install:
   - sudo apt-get update
