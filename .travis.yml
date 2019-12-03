@@ -9,17 +9,11 @@ env:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get -y install pkg-config openssl libssl-dev libcurl4-openssl-dev libelf-dev libdw-dev binutils-dev
+  - sudo apt-get -y install pkg-config openssl git libssl-dev libcurl4-openssl-dev libelf-dev libdw-dev binutils-dev
   - sudo apt-get -y install cmake
 
 rust: 
   - stable
-  - beta
-  - nightly
-
-matrix:
-  allow_failures:
-    - rust: nightly
 
 before_deploy:
   - export PATH=$HOME/.cargo/bin:$PATH
