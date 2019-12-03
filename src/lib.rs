@@ -5,7 +5,7 @@ pub mod calculatrice_primordial_fonction {
     pub mod basics {
         /// Add two number
         /// 
-        /// # Exemples
+        /// # Examples
         /// 
         /// ```
         /// let first_number = 10;
@@ -14,13 +14,13 @@ pub mod calculatrice_primordial_fonction {
         /// 
         /// assert_eq!(result, 22);
         /// ```
-        pub fn add(first_number: u32, second_number: u32) -> u32 {
+        pub fn add(first_number: i128, second_number: i128) -> i128 {
             first_number + second_number
         }
     
         /// Substract two number
         /// 
-        /// # Exemples
+        /// # Examples
         /// 
         /// ```
         /// let first_number = 10;
@@ -29,7 +29,7 @@ pub mod calculatrice_primordial_fonction {
         /// 
         /// assert_eq!(result, 8);
         /// ```
-        pub fn sub(first_number: u32, second_number: u32) -> u32 {
+        pub fn sub(first_number: i128, second_number: i128) -> i128 {
             first_number - second_number
         }
     
@@ -44,13 +44,13 @@ pub mod calculatrice_primordial_fonction {
         /// 
         /// assert_eq!(result, 20);
         /// ```
-        pub fn mul(first_number: u32, second_number: u32) -> u32 {
+        pub fn mul(first_number: i128, second_number: i128) -> i128 {
             first_number * second_number
         }
     
         /// Divide two number
         /// 
-        /// # Exemples
+        /// # Examples
         /// 
         /// ```
         /// let first_number = 10;
@@ -59,17 +59,20 @@ pub mod calculatrice_primordial_fonction {
         /// 
         /// assert_eq!(result, 5);
         /// ```
-        pub fn div(first_number: u32, second_number: u32) -> u32 {
+        pub fn div(first_number: i128, second_number: i128) -> i128 {
+            if first_number == 0 || second_number == 0 {
+
+            }
             first_number / second_number
         }
     }
 
     pub mod extends {
-        pub fn modulo(first_number: u32, second_number: u32) -> u32 {
+        pub fn modulo(first_number: i128, second_number: i128) -> i128 {
             first_number % second_number
         }
 
-        pub fn pow(first_number: u32, second_number: u32) -> u32 {
+        pub fn pow(first_number: i128, second_number: i128) -> i128 {
             first_number ^ second_number
         }
     }
