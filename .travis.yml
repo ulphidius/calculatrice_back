@@ -5,7 +5,7 @@ env:
     - MAJOR_VERSION=0
     - MINOR_VERSION=4
     - PATCH_VERSION=0
-    - CARGO_FILE="../Cargo.toml"
+    - CARGO_FILE="Cargo.toml"
 
 before_install:
   - sudo apt-get update
