@@ -1,10 +1,10 @@
 [package]
 name = "calculatrice_back"
 version = "0.3.1"
-description = "Calculator library (testing library so it's not recommended to use it)"
 authors = ["LAURENT Louis <louis_laurent@aol.fr>"]
 edition = "2018"
 license = "MIT"
+publish = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
