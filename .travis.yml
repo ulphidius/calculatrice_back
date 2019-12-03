@@ -2,9 +2,7 @@ language: rust
 
 env:
   global:
-    - MAJOR_VERSION=0
-    - MINOR_VERSION=4
-    - PATCH_VERSION=0
+    - VERSION=0.4.1
     - CARGO_FILE="Cargo.toml"
 
 before_install:
