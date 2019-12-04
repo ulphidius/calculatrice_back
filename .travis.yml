@@ -21,16 +21,15 @@ before_deploy:
   - cargo install cargo-travis
   - cargo install-update -a
   - cargo coveralls
+  - sed -i "s|version = \"[[:digit:]][[:digit:]]*.[[:digit:]][[:digit:]]*.[[:digit:]][[:digit:]]*\"|version = \"${VERSION}\"|" ${CARGO_FILE}
 
 deploy:
-  provider: script
-  script: scripts/master.sh
-  on:
-    tags: false
-    branch: master
-
-  # provider: cargo
-  # token: "nY986PSkVnA4Q3mk3LZpR9Afz64KIRkxP1dDKPlU2z4vjWK3BQdzwUvV2bf8WzipNQXOQFwvL3nn85Gh4We4NotK7Ud4xnsj0WXVO2/YGYm6vlwOHDNk6vznI5bhwF3L9RCdtzfG5s6KEXL/xIzj2GFm/lFNoy3dJEptAZ2hPx2HSZcg6+BbkBZYGbga2GnZxjYLFsbTWakRpH108wZRkXBE2zExzgVMEVSguA0zXdEXQ5jczDG5tQeLjR1ftjPkapnM1I/KVGIrDBlioKK7BpMPduyUw5b72AufngV+de/6NYfY62LNNTKQS2HDZvj4PwCdQiDQTV1UGv/A/FYb4Lr6Ghm0KW6a+vDT55mswA/A1uEyyhpVdHZCvS8shJnq/o3Y6/iqa+BGwmnoIb3yWwc+6KrgYWMI88Sf44lqDr9b4wY6CXPNhK/ChJyhWxPbM4r+5FTbOdezBvsyB7NZhH5eqYxz/Q1kRal1U/cuRFRi5begJUhga6vXmc/N6q0RGhO0H25VAQUl7zoK8b5djA3c0+bqcdtUJmAeMz0MKH6FnrE2tRyHrRUSKpLahuYdIQ7LGzQ0VLtwdg/DbxOjU4V+9WKgfyrud+FMvifrzb+jANOs+CP+BA3iKzW3xPp90dRrPedpaH0XJDcWJk+4a7Mr5vgiIszBBcZsWSuAW7A="
-  # on: 
+  # provider: script
+  # script: scripts/master.sh
+  # on:
   #   tags: false
   #   branch: master
+  provider: cargo
+  token: "nY986PSkVnA4Q3mk3LZpR9Afz64KIRkxP1dDKPlU2z4vjWK3BQdzwUvV2bf8WzipNQXOQFwvL3nn85Gh4We4NotK7Ud4xnsj0WXVO2/YGYm6vlwOHDNk6vznI5bhwF3L9RCdtzfG5s6KEXL/xIzj2GFm/lFNoy3dJEptAZ2hPx2HSZcg6+BbkBZYGbga2GnZxjYLFsbTWakRpH108wZRkXBE2zExzgVMEVSguA0zXdEXQ5jczDG5tQeLjR1ftjPkapnM1I/KVGIrDBlioKK7BpMPduyUw5b72AufngV+de/6NYfY62LNNTKQS2HDZvj4PwCdQiDQTV1UGv/A/FYb4Lr6Ghm0KW6a+vDT55mswA/A1uEyyhpVdHZCvS8shJnq/o3Y6/iqa+BGwmnoIb3yWwc+6KrgYWMI88Sf44lqDr9b4wY6CXPNhK/ChJyhWxPbM4r+5FTbOdezBvsyB7NZhH5eqYxz/Q1kRal1U/cuRFRi5begJUhga6vXmc/N6q0RGhO0H25VAQUl7zoK8b5djA3c0+bqcdtUJmAeMz0MKH6FnrE2tRyHrRUSKpLahuYdIQ7LGzQ0VLtwdg/DbxOjU4V+9WKgfyrud+FMvifrzb+jANOs+CP+BA3iKzW3xPp90dRrPedpaH0XJDcWJk+4a7Mr5vgiIszBBcZsWSuAW7A="
+  on: 
+    tags: true
